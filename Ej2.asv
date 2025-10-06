@@ -62,7 +62,7 @@ fprintf('%.18f',S);
 %% 
 N = 10000;
 Ndec = 0;
-for k=1:(2*N-1), Ndec = Ndec + log10(k); end
+for k=1:(2N-1), Ndec = Ndec + log10(k); end
 fprintf('%.3f\n',Ndec);
 %%
 N = 10000;
