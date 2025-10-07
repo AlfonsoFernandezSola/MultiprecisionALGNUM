@@ -51,19 +51,19 @@ for k = 1:length(Stxt)
     end
 end
 fprintf('%d %d \n', primos, posPrimos);
-%% Segunda implementación sumas parciales de e en precisión doble
+%% Segunda implementación sumas parciales de e co
 S = 0;
 N = 10;
 for k=N:-1:1
     S = (S + 2*k + 1)/(2*k*(2*k - 1));
 end
 fprintf('%.18f',S);
-%% Estimación de decimales correctos para la suma de N términos de e según la segunda implementación
+%% 
 N = 10000;
 Ndec = 0;
 for k=1:(2*N-1), Ndec = Ndec + log10(k); end
 fprintf('%.3f\n',Ndec);
-%% Segunda implementación de las sumas parciales de e en multiprecisión
+%%
 N = 10000;
 S = zeros(1,50000);
 for k=N:-1:1
@@ -72,7 +72,7 @@ for k=N:-1:1
 end
 Stxt = sprintf('%06d',S(2:end));
 disp(Stxt(end-9:end));
-%% Conteo de decimales correctos de e en Stxt (hasta 1 millón)
+%% 
 digitosCorrectos = 0;
 while digitosCorrectos < length(Stxt) && Stxt(digitosCorrectos + 1) == e(digitosCorrectos + 1)
     digitosCorrectos = digitosCorrectos + 1;
